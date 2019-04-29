@@ -1,0 +1,26 @@
+#table
+SQL> desc employee_registration;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ EID                                                   NOT NULL NUMBER(5)
+ NAME                                                  NOT NULL VARCHAR2(20)
+ ADDRESS                                               NOT NULL VARCHAR2(200)
+ CITY                                                  NOT NULL VARCHAR2(30)
+ PINCODE                                               NOT NULL NUMBER(7)
+ STATE                                                 NOT NULL VARCHAR2(25)
+ COUNTRY                                               NOT NULL VARCHAR2(30)
+ GENDER                                                NOT NULL VARCHAR2(7)
+ MARITIALSTATUS                                        NOT NULL VARCHAR2(20)
+ ENTRYTYPE                                             NOT NULL VARCHAR2(20)
+ EMAIL                                                 NOT NULL VARCHAR2(100)
+ DOB                                                   NOT NULL DATE
+ MOBILENO                                              NOT NULL NUMBER(10)
+ QUALIFICATION                                         NOT NULL VARCHAR2(20)
+ SPECIALIZATION                                        NOT NULL VARCHAR2(20)
+ HOBBY                                                 NOT NULL VARCHAR2(50)
+ ADHAR                                                 NOT NULL NUMBER(12)
+ COLOR                                                 NOT NULL VARCHAR2(20)
+ 
+ #sequence
+ SQL> create sequence emp_reg_seq start with 1 increment by 1;
+Sequence created.
