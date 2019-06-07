@@ -1,0 +1,28 @@
+SQL> create table sbi_bank_register(custNo number(5) primary key, holderName varchar2(50), fatherName varchar2(50), dateOfCreation date, adharNo number(13), dob date, 
+email varchar2(100), mobNo number(10), accountType varchar2(8));
+
+Table created.
+SQL> create sequence cust_no_bank start with 2 increment by 2;
+
+Sequence created.
+
+SQL> alter table sbi_bank_register add (candidatePhoto BLOB, certificatePhoto BLOB, adharPhoto BLOB, signaturePhoto BLOB);
+
+Table altered.
+
+SQL> desc sbi_bank_register;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ CUSTNO                                                NOT NULL NUMBER(5)
+ HOLDERNAME                                                     VARCHAR2(50)
+ FATHERNAME                                                     VARCHAR2(50)
+ DATEOFCREATION                                                 DATE
+ ADHARNO                                                        NUMBER(13)
+ DOB                                                            DATE
+ EMAIL                                                          VARCHAR2(100)
+ MOBNO                                                          NUMBER(10)
+ ACCOUNTTYPE                                                    VARCHAR2(8)
+ CANDIDATEPHOTO                                                 BLOB
+ CERTIFICATEPHOTO                                               BLOB
+ ADHARPHOTO                                                     BLOB
+ SIGNATUREPHOTO                                                 BLOB

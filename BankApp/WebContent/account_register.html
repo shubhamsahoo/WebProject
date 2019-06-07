@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="icon" href="sbi-logo.png">
+<title> SBI | User Registration</title>
+<script type="text/javascript" src="validation.js"></script>
+</head>
+<body bgcolor="cyan">
+<div align="center">
+	<img align="middle" src="sbi-logo-1.jpg">
+</div>
+<h1 style="color: blue; text-decoration: underline;">Register User:-</h1>
+<form action="maincontroller" method="post" enctype="multipart/form-data" onsubmit="return validate(this)">
+	<h2 style="text-align: center; color: maroon; text-decoration: underline;">Fill up the bellow form
+	<span style="color: red; font-size: medium; font-family: monospace; text-decoration: none;">[all fields are mandatory]
+	</span>
+	</h2>
+	<table border="1" style=" border-color:blue; text-align:center; background-color:lime;" align="center">
+		<tr>
+			<td>Enter Name</td><td><input type="text" name="name" pattern="[A-Za-z\s]*" required="required"><span id="nameErr"></span></td>
+		</tr>
+		<tr>
+			<td>Father Name</td>
+			<td><input type="text" name="fname" pattern="[A-Za-z\s]*" required="required"><span id="fnameErr" ></span></td>
+		</tr>
+		<tr>
+			<td>Date(Today)</td>
+			<td><input type="date" name="date" id="d" required="required"><span id="dateErr"></span></td>
+		</tr>
+		<tr>
+			<td>Adhar Number</td>
+			<td><input type="text" name="adhar" maxlength="12" pattern="[0-9]{12}" required="required"><span id="adharErr"></span></td>
+		</tr>
+		<tr>
+			<td>DOB</td>
+			<td><input type="date" name="dob" required="required"><span id="dobErr"></span></td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td><input type="email" name="email" pattern="[A-Za-z][A-Za-z0-9_.]*@[a-zA-Z0-9]+([.][a-zA-Z]+)+" required="required"><span id="emailErr"></span></td>
+		</tr>
+		<tr>
+			<td>Mobile Number</td>
+			<td><input type="tel" name="mob" pattern="[7-9][0-9]{9}" required="required" maxlength="10"><span id="mobileErr"></span></td>
+		</tr>
+		<tr>
+			<td>Account Type</td>
+			<td><input type="radio" name="account" value="saving" checked="checked">Saving Account<br>
+				<input type="radio" name="account" value="current">Current Account
+			</td>
+		</tr>
+		<tr>
+			<td>Candidate's Photo</td>
+			<td><input type="file" name="photo" required="required"><span id="photoErr"></span></td>
+		</tr>
+		<tr>
+			<td>10th Certificate</td>
+			<td><input type="file" name="certificate" required="required"><span id="certificateErr"></span></td>
+		</tr>
+		<tr>
+			<td>Candidate's Adhar</td>
+			<td><input type="file" name="adharphoto" required="required"><span id="adharPicErr"></span></td>
+		</tr>
+		
+		<tr>
+			<td>Candidate Signature</td>
+			<td><input type="file" name="signature" required="required"><span id="signatureErr"></span></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="SUBMIT" name="value"></td>
+			<td><input type="reset" value="CANCEL"></td>
+		</tr>
+	</table><br>
+	<input type="hidden" value="no" name="valid"/>
+	<div style="text-align: center;">
+<input type="submit" value="help? Any issue" name="value" style="background-color: Blue; width: 187px; height: 39px">
+</div>
+</form>
+<br><br><br>
+	<h3 style="text-align: center;">All are preserved &copy; &trade;</h3>
+</body>
+</html>
